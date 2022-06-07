@@ -114,11 +114,11 @@ public class GameManager : MonoBehaviour
             EventLogger.OnGameOver(playerScore);
 
         SetPlayerActive(false);
-        playerScore = 0;
     }
 
     public void StartGame()
     {
+        playerScore = 0;
         StartLevel (0);
     }
 
