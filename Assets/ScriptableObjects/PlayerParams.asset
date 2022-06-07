@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977d11bdfccc54f4980fc77d43e386b7, type: 3}
+  m_Name: PlayerParams
+  m_EditorClassIdentifier: 
+  MovementSpeed: 7
+  DefaultWeapon: {fileID: 7122913520962845937, guid: 702bec181ebe0484fbe41652c6b0679f, type: 3}

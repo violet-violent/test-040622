@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d9dae4f27f3ec489f1f05caf82d80c, type: 3}
+  m_Name: AntiPlayerPeaShooter
+  m_EditorClassIdentifier: 
+  WeaponName: Anti-Player Pea Shooter
+  KickDistance: 0.2
+  ProjectileSpeed: 40
+  ProjectileLifetime: 10
+  RefireDelay: 1
+  ProjectileModel: {fileID: 7320945048347711276, guid: f9748b58a070d8b4f964932084054c2a, type: 3}
