@@ -84,8 +84,9 @@ public class GameManager : MonoBehaviour
         UIControl.ShowScore(playerScore);
     }
 
-    public void RecordKill()
+    public void RecordKill(string _npcName)
     {
+        EventLogger.OnEnemyKill(_npcName);
         playerScore++;
         UIControl.ShowScore(playerScore);
     }
@@ -113,7 +114,9 @@ public class GameManager : MonoBehaviour
             EventLogger.OnGameOver(playerScore);
 
         SetPlayerActive(false);
+        playerScore = 0;
     }
+
     public void StartGame()
     {
         StartLevel (0);

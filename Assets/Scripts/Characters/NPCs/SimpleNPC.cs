@@ -15,10 +15,11 @@ public class SimpleNPC : GameCharacter
     private int nextWpt;
     private int wptFollowDirection;
     private GameCharacter targetedPlayer;
+    private bool isKilled;
 
     protected override void OnTriggerEnter(Collider other)
     {
-        
+        // nothing
     }
 
     protected override void Spawn()
@@ -26,6 +27,7 @@ public class SimpleNPC : GameCharacter
         IsPlayer = false;
         hitPts = Parameters.HitPoints;
         targetedPlayer = null;
+        isKilled = false;
 
         if (Waypoints.Length == 0)
         {
@@ -62,6 +64,12 @@ public class SimpleNPC : GameCharacter
 
     protected override void Die()
     {
+        // to prevent multiple executions
+        if (isKilled)
+            return;
+
+        isKilled = true;
+        GameManager.Instance.RecordKill(this.name);
         StartCoroutine(Death());
     }
 

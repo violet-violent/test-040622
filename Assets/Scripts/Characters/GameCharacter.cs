@@ -33,7 +33,7 @@ public abstract class GameCharacter : MonoBehaviour
 
         // activating the controller because unity can't do that for some reason
         if (thisCtrl)
-            thisCtrl.Move(transform.forward * 0);
+            thisCtrl.Move(transform.up * thisCtrl.minMoveDistance);
 
         // spawn method in inherited classes
         Spawn();

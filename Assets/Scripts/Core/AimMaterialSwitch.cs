@@ -17,16 +17,22 @@ public class AimMaterialSwitch : MonoBehaviour
             return;
 
         for (int z = 0; z < Renderers.Length; z++)
-            if ((_toAlt) && (Renderers[z]))
-                Renderers[z].material = AltMaterial;
-            else
-                Renderers[z].material = defMaterials[z];
+            if (Renderers[z])
+            {
+                if (_toAlt)
+                    Renderers[z].material = AltMaterial;
+                else
+                    Renderers[z].material = defMaterials[z];
+            }
 
         currentAltMat = _toAlt;
     }
 
     private bool CheckRaycast ()
     {
+        if (!Camera.main)
+            return false;
+
         Ray camRay = new Ray (Camera.main.transform.position, Camera.main.transform.forward);
         Physics.Raycast(camRay, out RaycastHit hitInfo);
 

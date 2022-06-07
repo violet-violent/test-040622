@@ -43,4 +43,9 @@ public class Logger : MonoBehaviour
     {
         LogString("Player Hits " + _enemyName);
     }
+
+    public void OnEnemyKill(string _enemyName)
+    {
+        LogString("Player Kills " + _enemyName);
+    }
 }
